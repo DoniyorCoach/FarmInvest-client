@@ -79,7 +79,7 @@ ProductCard.defaultProps = {
 };
 
 ProductCard.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string]).isRequired,
+  id: PropTypes.string.isRequired,
   image: PropTypes.string,
   name: PropTypes.string,
   income: PropTypes.number,
