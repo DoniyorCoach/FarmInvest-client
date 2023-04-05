@@ -1,0 +1,13 @@
+.farmPage {
+  @include flexible(center, normal, column, 30px);
+  padding: 20px;
+
+  &__content {
+    @include flexible(normal, center, row, 25px, wrap);
+  }
+}
+
+.null {
+  margin-top: 30px;
+  text-align: center;
+}

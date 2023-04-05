@@ -1,0 +1,6 @@
+.mainPage {
+  @include flexible(center, center, column, 20px, wrap);
+
+  width: 100%;
+  height: calc(100vh - 90px);
+}

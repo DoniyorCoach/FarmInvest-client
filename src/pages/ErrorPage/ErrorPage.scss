@@ -1,0 +1,5 @@
+.errorPage {
+  @include flexible(center, center, column, 25px);
+
+  margin-top: 40px;
+}

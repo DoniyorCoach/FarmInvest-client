@@ -1,0 +1,10 @@
+.bonusPage {
+  @include flexible(center, center, column, 50px);
+  
+  min-height: calc(100vh - 90px);
+
+  &__desc {
+    @include flexible(normal, normal, column, 7px);
+    text-align: center;
+  }
+}

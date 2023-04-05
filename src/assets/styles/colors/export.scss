@@ -1,0 +1,20 @@
+@import "./colors.scss";
+
+:export {
+    //Main colors
+    primary: $primary-color;
+    secondary: $secondary-color;
+    yellow: $yellow-color;
+    danger: $danger-color;
+    success: $success-color;
+    error: $error-color;
+
+    //Font colors
+    white: $white-color;
+    whiteLight: $white-light-color;
+    gray: $gray-color;
+    grayLight: $gray-light-color;
+    grayDark: $gray-dark-color;
+    cyan: $cyan-color;
+    cyanLight: $cyan-light-color;
+}

@@ -1,0 +1,29 @@
+.tabs {
+  &__header {
+    @include flexible(center, center, row, 60px);
+  }
+
+  &__tab {
+    padding-bottom: 8px;
+
+    font-weight: 550;
+    color: $gray-light-color;
+    
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+
+    &--active {
+      color: $cyan-color;
+      border-bottom: 1px solid $cyan-color;
+    }
+  }
+
+  &__pane {
+    display: none;
+    margin-top: 40px;
+
+    &--active {
+      display: block;
+    }
+  }
+}

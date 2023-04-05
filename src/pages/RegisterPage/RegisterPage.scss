@@ -1,0 +1,9 @@
+.registerPage {
+  @include flexible(center, center, column, 20px);
+  min-height: 100vh;
+
+  &__logo {
+    width: 13%;
+    height: 13%;
+  }
+}

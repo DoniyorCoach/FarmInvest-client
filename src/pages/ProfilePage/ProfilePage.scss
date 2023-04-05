@@ -1,0 +1,17 @@
+.profilePage {
+  @include flexible(center, center, column, 40px);
+
+  min-height: calc(100vh - 90px);
+
+  &__info,
+  &__wallet {
+    @include flexible(center, normal, column, 10px);
+
+    width: 30%;
+
+  }
+
+  &__controller {
+    align-self: center;
+  }
+}

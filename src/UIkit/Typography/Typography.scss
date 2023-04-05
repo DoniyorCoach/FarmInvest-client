@@ -1,0 +1,20 @@
+.typography {
+    &--regular-14-20 {
+        @include typography(14px, 400, 20px);;
+    }
+    &--regular-16-24 {
+        @include typography(16px, 400, 24px);;
+    }
+    &--regular-18-24 {
+        @include typography(18px, 400, 24px);
+    }
+    &--medium-16-24 {
+        @include typography(16px, 500, 24px);
+    }
+    &--heading-h2 {
+        @include typography(18px, 500, 24px);
+    }
+    &--heading-h1 {
+        @include typography(26px, 500, 32px);
+    }
+}

@@ -1,0 +1,16 @@
+.productCard {
+  @include flexible(center, center, column, 15px);
+
+  width: 25%;
+  min-width: 280px;
+
+  padding: 10px 15px;
+  
+  background-color: $cyan-light-color;
+  border-radius: 6px;
+  
+  &__image {
+    width: 50%;
+    height: 30%;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin typography($fs: 16px, $fw: 400, $lh: 16px) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin flexible($ai: normal, $jc: flex-start, $fd: row, $gap: normal, $fw: nowrap ) {
+  display: flex;
+
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+  
+  gap: $gap;
+}

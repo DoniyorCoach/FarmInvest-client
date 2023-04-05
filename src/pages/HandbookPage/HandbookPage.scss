@@ -1,0 +1,12 @@
+.handbookPage {
+  @include flexible(center, center, column, 50px);
+  
+  width: 60%;
+  min-height: calc(100vh - 150px);
+
+  margin: 30px auto;
+
+  &__advice, &__benefits {
+    @include flexible(normal, normal, column, 10px);
+  }
+}

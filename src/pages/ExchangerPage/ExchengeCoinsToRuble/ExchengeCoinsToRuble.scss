@@ -1,0 +1,7 @@
+.exchengeCoinsToRuble {
+  @include flexible(center, normal, column, 30px);
+
+  &__title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,8 @@
+.shopPage {
+  @include flexible(center, normal, column, 30px);
+  padding: 20px;
+
+  .shopPage__content {
+    @include flexible(normal, center, row, 25px, wrap);
+  }
+}

@@ -1,0 +1,10 @@
+.loadingPage {
+  @include flexible(center, center);
+
+  height: 100vh;
+
+  &__spinner {
+    width: 15%;
+    height: 15%;
+  }
+}

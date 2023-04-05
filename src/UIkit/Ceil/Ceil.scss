@@ -1,0 +1,5 @@
+.ceil {
+  @include flexible(center, space-between);
+  width: 100%;
+  min-width: 260px;
+}

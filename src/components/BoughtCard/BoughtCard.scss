@@ -1,0 +1,12 @@
+.boughtCard {
+  @include flexible(center, normal, column, 15px);
+
+  width: 25%;
+  min-width: 280px;
+
+  padding: 20px;
+  
+  &__income {
+    text-align: center;
+  }
+}

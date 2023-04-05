@@ -1,0 +1,29 @@
+.button {
+  width: 100%;
+  height: 44px;
+  min-width: 220px;
+  color: $white-color;
+
+  border-radius: 6px;
+
+  &--primary {
+    background-color: $primary-color;
+  }
+  &--secondary {
+    background-color: $secondary-color;
+  }
+  &--success {
+    background-color: $success-color;
+  }
+  &--danger {
+    background-color: $danger-color;
+  }
+  &--cyan {
+    background-color: $cyan-color;
+  }
+
+  &:hover:not(:disabled) {
+    transition-duration: $animation-default-time;
+    background-color: $yellow-color;
+  }
+}
