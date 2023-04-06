@@ -1,6 +1,6 @@
 @font-face {
+  font-display: swap;
   font-family: 'Golos';
-  font-style: normal;
   font-weight: 400;
 
   src: local('Golos'),
@@ -8,8 +8,8 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Golos';
-  font-style: normal;
   font-weight: 500;
 
   src: local('Golos'),
@@ -21,8 +21,10 @@
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+
   font-family: 'Golos', sans-serif;
+
+  box-sizing: border-box;
 }
 
 a,
