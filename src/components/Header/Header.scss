@@ -1,30 +1,28 @@
 .header {
-  width: 100%;
   @include flexible(center, space-around);
+
+  width: 100%;
   height: 90px;
+  
   background-color: $white-light-color;
 
-  @media screen and (max-width: 450px) {
-    @include flexible(center, normal, column, 5px);
-    padding: 5px 0;
-    height: 90px;
-  }
   &__logo {
     width: 65px;
     height: 65px;
-
-    @media screen and (max-width: 450px) {
-      display: none;
-    }
   }
 
   &__main {
     width: 25%;
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 
   &__balance {
-    width: max-content;
     @include flexible(center, normal, row, 6px);
+    width: max-content;
+    
     img {
       width: 27px;
       height: 27px;
