@@ -79,7 +79,7 @@ const RegisterPage = () => {
         Создать аккаунт
       </Button>
       <Button type={buttonTypes.Primary} width="25%" to="/">
-        🢂 Уже есть аккаунт ? 🢀
+        &#10528; Уже есть аккаунт ? &#10527;
       </Button>
       {valid && <Alert status="error">{valid}</Alert>}
       {apiData && <Alert status={apiData[0]}>{apiData[1]}</Alert>}

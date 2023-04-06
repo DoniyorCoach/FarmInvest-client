@@ -73,7 +73,7 @@ const LoginPage = () => {
         Войти в аккаунт
       </Button>
       <Button type={buttonTypes.Primary} width="25%" to="/register">
-        🢂 Ещё нет аккаунта ? 🢀
+        &#10528; Ещё нет аккаунта ? &#10527;
       </Button>
       {valid && <Alert status="error">{valid}</Alert>}
       {apiData && <Alert status={apiData[0]}>{apiData[1]}</Alert>}
