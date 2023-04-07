@@ -19,9 +19,9 @@ import './FarmPage.scss';
 
 const FarmPage = () => {
   const [products, setProducts] = useState('');
-  const [statusProducts, setStatusProducts] = useState(null);
-  const [statusCollect, setStatusCollect] = useState(null);
-  const [collect, setCollect] = useState(false);
+  const [error, setError] = useState(null);
+  const [collected, setCollected] = useState(false);
+  const [btnDisabled, setBtnDisabled] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -29,19 +29,25 @@ const FarmPage = () => {
       if (status === 200) {
         setProducts(message);
       } else {
-        setStatusProducts(message);
+        setError(message);
       }
     })();
-  }, [collect]);
+  }, [collected]);
 
   const handleCollect = async () => {
+    setBtnDisabled(true);
     const { status, message } = await collectIncome();
+
     if (status === 200) {
-      setCollect(!collect);
+      setCollected(!collected);
       PaymentStore.setCoins(message);
     } else {
-      setStatusCollect(message);
+      setError(message);
     }
+
+    setTimeout(() => {
+      setBtnDisabled(false);
+    }, 1500);
   };
 
   return (
@@ -55,6 +61,7 @@ const FarmPage = () => {
           >
             Моя ферма
           </Typography>
+          {error && <Alert status="error">{error}</Alert>}
           <div className="farmPage__content">
             {products.map((product) => (
               <BoughtCard
@@ -71,6 +78,7 @@ const FarmPage = () => {
             width="20%"
             onClick={handleCollect}
             className="farmPage__btn"
+            disabled={btnDisabled}
           >
             Собрать
           </Button>
@@ -86,8 +94,6 @@ const FarmPage = () => {
           </Typography>
         )
       )}
-      {statusProducts && <Alert status="error">{statusProducts}</Alert>}
-      {statusCollect && <Alert status="error">{statusCollect}</Alert>}
     </UserLayout>
   );
 };
