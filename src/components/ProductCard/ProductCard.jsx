@@ -14,11 +14,21 @@ import { buyProduct } from '@Api/fetchProducts';
 
 import './ProductCard.scss';
 
-const ProductCard = ({ id, image, name, income, price }) => {
+const ProductCard = ({
+  id,
+  image,
+  name,
+  income,
+  price,
+  disabled,
+  setBtnsDisabled,
+}) => {
   const [status, setStatus] = useState(null);
   const { balanceToBuy } = PaymentStore.wallet;
 
   const handleBuy = async () => {
+    setBtnsDisabled(true);
+
     if (balanceToBuy >= price) {
       try {
         PaymentStore.setBalanceToBuy(balanceToBuy - price);
@@ -31,7 +41,8 @@ const ProductCard = ({ id, image, name, income, price }) => {
       setStatus(['error', 'недостаточно средств']);
     }
 
-    setTimeout(() => setStatus(null), 2000);
+    setTimeout(() => setBtnsDisabled(false), 500);
+    setTimeout(() => setStatus(null), 1500);
   };
 
   return (
@@ -63,6 +74,7 @@ const ProductCard = ({ id, image, name, income, price }) => {
         type={buttonTypes.Success}
         onClick={handleBuy}
         className="productCard__order"
+        disabled={disabled}
       >
         ➕ Купить
       </Button>
@@ -76,6 +88,9 @@ ProductCard.defaultProps = {
   name: '',
   income: 0,
   price: 0,
+  disabled: false,
+
+  setBtnsDisabled: () => null,
 };
 
 ProductCard.propTypes = {
@@ -84,6 +99,9 @@ ProductCard.propTypes = {
   name: PropTypes.string,
   income: PropTypes.number,
   price: PropTypes.number,
+  disabled: PropTypes.bool,
+
+  setBtnsDisabled: PropTypes.func,
 };
 
 export default ProductCard;

@@ -17,6 +17,7 @@ import './ShopPage.scss';
 const ShopPage = observer(() => {
   const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
+  const [btnsDisabled, setBtnsDisabled] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -27,7 +28,7 @@ const ShopPage = observer(() => {
         setError(message);
       }
     })();
-  }, []);
+  }, [btnsDisabled]);
 
   return (
     <UserLayout>
@@ -50,6 +51,8 @@ const ShopPage = observer(() => {
                 price={product.price}
                 income={product.incomePerHour}
                 image={`${process.env.REACT_APP_API_MEDIA}/${product.image}`}
+                disabled={btnsDisabled}
+                setBtnsDisabled={setBtnsDisabled}
               />
             ))}
           </div>
