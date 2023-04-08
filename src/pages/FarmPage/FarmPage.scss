@@ -1,5 +1,7 @@
 .farmPage {
   @include flexible(center, normal, column, 30px);
+  min-height: calc(100vh - 90px);
+  
   padding: 20px;
 
   &__content {

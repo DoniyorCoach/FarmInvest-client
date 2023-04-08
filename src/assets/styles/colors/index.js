@@ -2,6 +2,7 @@ import exportColors from './export.scss';
 
 const colors = {
   primary: exportColors.primary,
+  primaryLight: exportColors.primaryLight,
   secondary: exportColors.secondary,
   yellow: exportColors.yellow,
   danger: exportColors.danger,
@@ -16,6 +17,7 @@ const colors = {
   grayDark: exportColors.grayDark,
   cyan: exportColors.cyan,
   cyanLight: exportColors.cyanLight,
+  blue: exportColors.blue,
 };
 
 export default colors;

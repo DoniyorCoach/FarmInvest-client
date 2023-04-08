@@ -7,23 +7,42 @@
   border-radius: 6px;
 
   &--primary {
-    background-color: $primary-color;
+    background: linear-gradient(to bottom, $primary-light-color, $blue-color);
+    &:hover {
+      background: $yellow-color;
+    }
   }
+
   &--secondary {
     background-color: $secondary-color;
   }
+
   &--success {
-    background-color: $success-color;
-  }
-  &--danger {
-    background-color: $danger-color;
-  }
-  &--cyan {
-    background-color: $cyan-color;
+    background: linear-gradient(to bottom, $success-color, $cyan-color);
+
+    &:hover {
+      background: linear-gradient(to bottom, $danger-color, $blue-color);
+    }
   }
 
-  &:hover:not(:disabled) {
-    transition-duration: $animation-default-time;
-    background-color: $yellow-color;
+  &--danger {
+    background: $danger-color;
+
+    &:hover {
+      background: linear-gradient(to bottom, $danger-color, $blue-color);
+    }
+  }
+
+  &--cyan {
+    background: linear-gradient(
+      to bottom,
+      $cyan-color,
+      $cyan-light-color,
+      $cyan-color
+    );
+
+    &:hover {
+      background: $yellow-color;
+    }
   }
 }
