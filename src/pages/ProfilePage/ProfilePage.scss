@@ -6,9 +6,7 @@
   &__info,
   &__wallet {
     @include flexible(center, normal, column, 10px);
-
-    width: 30%;
-
+    width: 40%;
   }
 
   &__controller {

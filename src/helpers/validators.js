@@ -9,8 +9,8 @@ export const registerValidate = (login, email, password) => {
   }
 
   // Email
-  if (!(emailCheck.length >= 7 && emailCheck.length <= 35)) {
-    return 'Длина электронной почты должна быть от 7 до 35 символов';
+  if (!(emailCheck.length >= 7 && emailCheck.length <= 30)) {
+    return 'Длина электронной почты должна быть от 7 до 30 символов';
   }
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!emailRegex.test(emailCheck)) {

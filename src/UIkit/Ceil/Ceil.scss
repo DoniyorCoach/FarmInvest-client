@@ -1,5 +1,12 @@
 .ceil {
   @include flexible(center, space-between);
+
   width: 100%;
-  min-width: 260px;
+  min-width: 320px;
+
+  @media screen and (max-width: 900px) {
+    p {
+      font-size: 14px;
+    }
+  }
 }
