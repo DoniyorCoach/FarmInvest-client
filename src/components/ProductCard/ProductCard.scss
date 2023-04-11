@@ -4,12 +4,10 @@
   width: 25%;
   min-width: 280px;
 
-  padding: 5px 25px;
-  
-  border-radius: 6px;
-  
+  padding: 5px;
+
   &__image {
-    width: 50%;
-    height: 30%;
+    height: 110px;
+    object-fit: contain;
   }
 }

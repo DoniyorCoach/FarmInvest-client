@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Alert from '@UIkit/Alert';
 import Button, { buttonTypes } from '@UIkit/Button';
@@ -47,7 +48,11 @@ const ProductCard = ({
 
   return (
     <div className="productCard">
-      <img src={image} alt="product" className="productCard__image" />
+      <LazyLoadImage
+        src={image}
+        alt="product"
+        className="productCard__image"
+      />
       <Typography
         variant={typographyVariants.HeadingH2}
         color={colors.secondary}
@@ -74,6 +79,7 @@ const ProductCard = ({
         type={buttonTypes.Success}
         onClick={handleBuy}
         className="productCard__order"
+        width="70%"
         disabled={disabled}
       >
         ➕ Купить
